@@ -1,0 +1,17 @@
+package jotforrm;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class test {
+	public static void main(String [] args) throws InterruptedException{
+		
+		System.setProperty("webdriver.chrome.driver","C:/seleniumtools/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://form.jotform.com/232900647228052/");
+		System.out.println("Selenium Webdriver Script in Chrome browser | SoftwareTesting Material");
+		driver.findElement(By.id("first_3")).sendKeys("nehal");
+		
+}
+}
