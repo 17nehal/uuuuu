@@ -15,3 +15,36 @@ public class test {
 		
 }
 }
+
+
+
+package selenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class jotform2 
+{
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:/Users/DMC College/Desktop/UPDATED ECLIPSE/chromedriver.exe");
+	    WebDriver driver = new ChromeDriver();
+	    driver.get("https://form.jotform.com/222571179097059");
+	    driver.findElement(By.name("q3_name[first]")).sendKeys("Joism");
+	    driver.findElement(By.name("q3_name[last]")).sendKeys("Lobo");
+	    driver.findElement(By.name("q4_email")).sendKeys("joismlobo@gmail.com");
+	    driver.findElement(By.name("q5_address[addr_line1]")).sendKeys("Soranto Vaddo,Anjuna,Bardez-Goa.");
+	    
+	    driver.findElement(By.name("q5_address[city]")).sendKeys("Anjuna");
+	    driver.findElement(By.name("q5_address[state]")).sendKeys("GOA");
+	    driver.findElement(By.name("q5_address[postal]")).sendKeys("403509");
+	    driver.findElement(By.name("q6_phoneNumber[full]")).sendKeys("9921449948");
+	    driver.findElement(By.id("input_2")).click(); 
+	    driver.close();
+	}
+
+}
+
